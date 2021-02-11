@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <title>Todo-List</title>
 </head>
 <body>
@@ -14,7 +14,9 @@
             <h2>Salve a sua próxima tarefa!</h2>
             <form action="" id="add-task-form">
                 <input type="text" id="task-title" placeholder="O que você vai fazer?">
-                <button id="add-button" type="submit">+</button>
+                <button id="add-button" type="submit">
+                    <i name="add-outline" class="fa fa-plus" aria-hidden="true"></i>
+                </button>
             </form>
 
         </div><!--task-header-->
@@ -23,13 +25,14 @@
             <ul id="task-list">
                 <li class="task-box tamplate hide">
                     <span class="task-title"></span>
-                    <i>i</i>
-                    <i>i</i>
+                    <i class="fa fa-check done-btn" aria-hidden="true"></i>
+                    <i class="fa fa-times remove-btn"  aria-hidden="true"></i>
                 </li>
             </ul>
         </div><!--task-list-container-->
 
     </div><!--tasks-container-->
     
+    <script src="js/script.js"></script>
 </body>
 </html>

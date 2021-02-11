@@ -9,14 +9,21 @@ btn.addEventListener("click", function(event){
     const tamplate = document.querySelector(".tamplate")
     const newTask = tamplate.cloneNode(true)
 
-    const title = newTask.querySelector("span")
-    title.innerHTML = taskTitle
+    newTask.querySelector("span").innerHTML = taskTitle
 
     newTask.classList.remove("tamplate","hide")
     const ul = document.querySelector("#task-list")
     ul.append(newTask)
 
-    
+    const removeBtn = newTask.querySelector(".remove-btn")
+    removeBtn.addEventListener("click", function(){
+        removeTask(this)
+    })
+
 
     console.log(newTask);
 })
+
+function removeTask(task){
+    task.parentNode.remove()
+}
